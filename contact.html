@@ -1,0 +1,15 @@
+<form id="contactForm">
+    <label for="email">Email:</label>
+    <input type="email" id="email" required>
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    let email = document.getElementById("email").value;
+    if (!email.includes("@")) {
+        alert("Please enter a valid email address.");
+        event.preventDefault();
+    }
+});
+</script>
